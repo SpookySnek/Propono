@@ -1,15 +1,15 @@
 body {
   background-color: #faf7ff;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 header {
@@ -21,24 +21,23 @@ header {
   justify-content: center;
   color: white;
   font-size: xx-large;
-  text-shadow: -10px 10px 0px #f7b8ff,
-  -20px 20px 0px #f186ff,
-  -30px 30px 0px rgb(237, 99, 255);
+  text-shadow: -10px 10px 0px #f7b8ff, -20px 20px 0px #f186ff,
+    -30px 30px 0px rgb(237, 99, 255);
 }
-.headerText{
-margin-top: -0.1rem;
+.headerText {
+  margin-top: -0.1rem;
 }
-footer{
+footer {
   text-align: center;
-  position:absolute;
-  bottom:0rem;
+  position: absolute;
+  bottom: 0rem;
   width: 100%;
   height: 2.5rem;
 }
 .App {
   text-align: center;
 }
-.Content{
+.Content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -46,14 +45,16 @@ footer{
 
 .addButton {
   background-color: rgb(237, 99, 255);
-  border: 0 solid #E5E7EB;
+  border: 0 solid #e5e7eb;
   box-sizing: border-box;
   color: #ffffff;
-  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.75rem;
-  padding: .75rem 1.65rem;
+  padding: 0.75rem 1.65rem;
   position: relative;
   text-align: center;
   text-decoration: none #000000 solid;
@@ -73,7 +74,7 @@ footer{
 }
 
 .addButton:after {
-  content: '';
+  content: "";
   position: absolute;
   border: 1px solid #000000;
   bottom: 4px;
@@ -86,7 +87,7 @@ footer{
   bottom: 2px;
   left: 2px;
 }
-.cardButtons{
+.cardButtons {
   border: 1px;
   border-radius: 2px;
   margin: 0.1rem;
@@ -94,18 +95,21 @@ footer{
   background-color: rgb(237, 99, 255);
   color: white;
 }
-.wrapper{
+.cardButtons:hover {
+  background-color: rgb(231, 47, 255);
+}
+.wrapper {
   display: flex;
   margin: 1rem;
-  flex-direction: row; 
+  flex-direction: row;
   background-color: transparent;
   width: 300px;
   height: 200px;
   perspective: 1000px;
 }
 
-.card{
-  display:flex;
+.card {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: auto;
@@ -116,12 +120,12 @@ footer{
   text-align: center;
   transition: 0.8s;
   transform-style: preserve-3d;
-
 }
 .wrapper:hover .card {
   transform: rotateY(180deg);
 }
-.unflipped, .flipped {
+.unflipped,
+.flipped {
   position: absolute;
   width: 100%;
   height: 100%;
