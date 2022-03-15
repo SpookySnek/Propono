@@ -6,13 +6,17 @@ const AddMovie = () => {
 
     const [picture, setPicture] = useState<Picture>();
     const [name, setName] = useState<string>("");
+    const [imgUrl, setImgUrl] = useState<string>("");
     const [title, setTitle] = useState<string>("");
+    const [tag, setTag] = useState<string>("");
 
     const handleAdd = async () => {
-        console.log("name, title" + name +" "+  title);
-        await axios.post("https://localhost:7260/api/picture", {"Title": name,
-        "UploadDate": "2022-03-14T15:32:03.454Z",
-        "ImgUrl": "blabla"})
+        console.log("name, title" + name +" "+  imgUrl);
+        await axios.post("https://localhost:7260/api/picture", {"title": title,
+        "uploadDate": new Date(),
+        "imgUrl": imgUrl,
+        "tag": tag})
+        window.location.reload()
     }
     
     
@@ -21,9 +25,10 @@ const AddMovie = () => {
     
   return (
     <div>
-        <input type="text" value={picture?.title} onChange={(e) => setTitle(e.target.value)}/>
-        {/* <input type="text" value={picture?.genre?.name} onChange={(e) => setName(e.target.value)}/> */}
-        <button onClick={handleAdd}>ADD</button>
+        <input type="text" value={picture?.title} onChange={(e) => setTitle(e.target.value)} placeholder="Title"/>
+        <input type="text" value={picture?.imgUrl} onChange={(e) => setImgUrl(e.target.value)} placeholder="Image URL"/>
+        <input type="text" value={picture?.tag} onChange={(e) => setTag(e.target.value)} placeholder="Tags (Optional)"/>
+        <button className="addButton" onClick={handleAdd}>Add image</button>
     </div>
   )
 }

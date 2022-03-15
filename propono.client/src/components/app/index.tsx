@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import './App.css';
-import PictureList from '../pictureList';
+import PictureList from '../picturesList';
 import AddPicture from '../addPictures/addPictures';
 
 export interface Picture {
@@ -27,10 +27,20 @@ function App() {
   }, [])
   console.log("I rendered")
   return (
+    <>
+    <header>
+      <h1 className="headerText">Propono</h1>
+    </header>
     <div className="App">
       <AddPicture/>
-      <PictureList datalist={pictures}/>
+      <div className="Content">
+        <PictureList datalist={pictures}/>
+      </div>
     </div>
+    <footer>
+      <small>Created by Carl Morisbak Olsson for SALT @2022</small>
+    </footer>
+    </>
   );
 }
 

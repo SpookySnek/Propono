@@ -1,4 +1,5 @@
 body {
+  background-color: #faf7ff;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,21 +12,132 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.card{
-  border: 1px solid black;
-  width: 20rem;
+header {
+  background-color: #e9defd;
+  height: 95px;
   display: flex;
-  flex-direction: column; 
-  padding: 1rem;
-  margin:1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: xx-large;
+  text-shadow: -10px 10px 0px #f7b8ff,
+  -20px 20px 0px #f186ff,
+  -30px 30px 0px rgb(237, 99, 255);
+}
+.headerText{
+margin-top: -0.1rem;
+}
+footer{
+  text-align: center;
+  position:absolute;
+  bottom:0rem;
+  width: 100%;
+  height: 2.5rem;
+}
+.App {
+  text-align: center;
+}
+.Content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.addButton {
+  background-color: rgb(237, 99, 255);
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 9rem;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.addButton:focus {
+  outline: 0;
+}
+
+.addButton:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.addButton:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+.cardButtons{
+  border: 1px;
+  border-radius: 2px;
+  margin: 0.1rem;
+  padding: 0.4rem;
+  background-color: rgb(237, 99, 255);
+  color: white;
+}
 .wrapper{
+  display: flex;
+  margin: 1rem;
+  flex-direction: row; 
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.card{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: auto;
   width: 90%;
-  padding : 2 rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+
+}
+.wrapper:hover .card {
+  transform: rotateY(180deg);
+}
+.unflipped, .flipped {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.unflipped {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flipped {
+  background-color: #f186ff;
+  color: white;
+  transform: rotateY(180deg);
 }
