@@ -38,7 +38,10 @@ function App() {
         </div>
       </div>
       <footer>
-        <small>Created by Carl Morisbak Olsson for SALT @2022</small>
+        <small>Created by Carl Morisbak Olsson for SALT @2022 </small>
+        <a href="https://kopimistsamfundet.se/">
+          <img alt="kopimi" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Kopimi-logo-SVG.svg/697px-Kopimi-logo-SVG.svg.png" height={20} width={20}/>
+        </a>
       </footer>
     </>
   );
